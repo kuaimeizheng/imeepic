@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta property="qc:admins" content="3360261470136521576367"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>[!--pagetitle--]</title>
+    <meta name="keywords" content=" [!--pagekey--] "/>
+    <meta name="description" content=" [!--pagedes--]"/>
+    <link rel="stylesheet" type="text/css" href="http://www.imeepic.com/css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="http://www.imeepic.com/css/common1.0.css"/>
+    <link rel="stylesheet" type="text/css" href="http://www.imeepic.com/css/newIndex.css?v=1"/>
+    <style type="text/css">
+        .header-content {
+            clear: both;
+        }
+
+        .header-nav ul, .header-nav .fr {
+            margin-top: 0px !important;
+            padding: 0px !important;
+            line-height: 30px;
+            height: 30px;
+        }
+
+        .vip_recharge {
+            display: inline-block;
+            width: 75px;
+            height: 18px !important;
+            line-height: 18px;
+            background-image: url('images/vip/vip_recharge.png');
+            background-repeat: no-repeat;
+            background-position: 0px 0px;
+            margin-top: 5px;
+        }
+
+        .vip_recharge:hover {
+            background-position: 0px -23px;
+        }
+
+        .header-user1 {
+            padding-top: 20px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+[!--temp.indextop--]
+[!--temp.header--][!--temp.indexsearch--]
+<style type="text/css">
+    .home-search-form {
+        position: relative;
+        z-index: 999;
+    }
+
+    #keyup_d {
+        border: 1px solid #C3C3C3;
+        width: 585px;
+        background-color: #FFFFFF;
+        position: absolute;
+        left: 2px;
+        top: 38px;
+        padding: 10px 0;
+        z-index: 99;
+    }
+
+    .sokeyup_1 {
+        zoom: 1;
+    }
+
+    .sokeyup_1 li {
+        float: left;
+        height: 35px;
+        line-height: 35px;
+        font-size: 16px;
+        zoom: 1;
+    }
+
+    .sokeyup_2 {
+        width: 435px;
+        padding-left: 20px;
+        zoom: 1;
+    }
+
+    .sokeyup_3 {
+        width: 110px;
+        padding-right: 20px;
+        text-align: right;
+        color: #62B95B;
+        zoom: 1;
+    }
+
+    .sokeyup_4 {
+        display: none;
+    }
+</style>
+
+
+<!--首页幻灯片-->
+<div class="slide">
+    <div class="images"> [e:loop={100,5,0,1}]
+        <div><a href="<?=$bqr[url]?>" title="<?=$bqr[title]?>" target="_blank"><img src="<?=$bqr[titlepic]?>"
+                                                                                    alt="<?=$bqr[title]?>"/></a></div>
+        [/e:loop]
+    </div>
+    <a class="backward png">prev</a><a class="forward png">next</a>
+    <div class="tabs"><a href="#"></a><a href="#"></a><a href="#"></a></div>
+</div>
+<!--首页幻灯片结束-->
+<div class="w1000 wrapper clearboth pt20"><!--左侧内容-->
+    <div class="index_left clearboth"><!--热门搜索-->
+
+    </div>
+    <!--热门搜索结束-->
+
+    <!--站点导航-->
+    <div class="index_navigation">
+        <p class="index_title">周下载排行</p>
+    </div>
+    <div class="index_week_lList">
+        <ul>
+            <li><a href="/e/action/ListInfo.php?&classid=1&ph=1&starttime=<?=date("
+                   Y-m-d",strtotime("-7 day"))?>&endtime=<?=date("Y-m-d")?>
+                &orderby=totaldown" target="_blank" title="周下载排行" >周下载排行</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="index_navigation">
+    <p class="index_title">月下载排行</p>
+</div>
+<div class="index_month_lList">
+    <ul>
+        <li><a href="/e/action/ListInfo.php?&classid=1&ph=1&starttime=<?=date(" Y-m-d",strtotime("-30
+            day"))?>&endtime=<?=date("Y-m-d")?>&orderby=totaldown" target="_blank" title="月下载排行" >月下载排行</a></li>
+    </ul>
+</div>
+</div>
+<!--站点导航结束-->
+
+<!--最受喜爱-->
+<div class="show_title"><span>最受喜爱<a href="/e/action/ListInfo.php?&classid=1&ph=1&starttime=<?=date(" Y-m-d",strtotime("-1 day"))?>&endtime=<?=date("Y-m-d")?>
+    " target="_blank" title="最受喜爱"></a></span></div>
+<div class="home-flow clearfix" id="listBox">
+    [e:loop={1,6,0,0}]
+    <div class="flow-box" id="flow-b">
+        <div class="flow-thumb" style="height:; overflow:hidden; position:relative;"><a href="<?=$bqsr[titleurl]?>"
+                                                                                        target="_blank"
+                                                                                        title="<?=$bqr[title]?>"><img
+                class="scrollLoading  show_img" src="http://www.imeepic.com/images/lazypic.jpg"
+                data-url="<?=$bqr[titlepic]?>" alt="<?=$bqr[title]?>" title="<?=$bqr[title]?>" width="202"/></a><a
+                href="javascript:void(0)" data-action="" class="user-fav" data-class="user-f"
+                onclick="addfav(<?=$bqr[classid]?>,<?=$bqr[id]?>)"></a><a
+                href="/e/DownSys/DownSoft/?classid=<?=$bqr[classid]?>&id=<?=$bqr[id]?>&pathid=0" class="user-dl"
+                target="_blank"></a></div>
+        <div class="flow-info2 nounderline">
+            <p><a href="<?=$bqsr[titleurl]?>" target="_blank" title="<?=$bqr[title]?>">
+                <?=$bqr[title]?>
+            </a></p>
+           <!-- <p class="uploadN"> 已下载
+                <script src="/e/public/ViewClick/?classid=<?=$bqr[classid]?>&id=<?=$bqr[id]?>&down=1"></script>
+                次
+            </p>-->
+        </div>
+    </div>
+    [/e:loop]
+
+    <div class="hot-item"><a target="_blank" title="每周金奖">每周金奖</a>
+    </div>
+    e:loop={1,1,0,0}]
+
+</div>
+<!--最受喜爱--></div>
+
+
+<!--底部友情链接-->
+<div class="friend_ship">
+    <div class="w1000 wrapper">
+        <div class="friend_title"><a href="javascript:;" class="friend_default firend_blogroll ">友情连接</a><a
+        <ul class="friend_content fFlist">
+            [phomelink]99,99,0,0,1[/phomelink]
+        </ul>
+    </div>
+</div>
+
+[!--temp.footer--]
+<script type="text/javascript" src="js/jQuery.js"></script>
+<script type="text/javascript" src="js/jquery.timeago.js"></script>
+<script type="text/javascript" src="js/Masonry.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+<script type="text/javascript" src="js/jquery.tools.tabs.min.js"></script>
+<script type="text/javascript" src="js/Slider.min.js"></script>
+<script type="text/javascript" src="js/searchTips.js"></script>
+<script type="text/javascript" src="js/jquery.scrollLoading-min.js"></script>
+<script type="text/javascript" src="js/imagesloaded.js"></script>
+<script type="text/javascript" src="js/newIndex.js?v=2"></script>
+<!--[if lte IE 6]>
+<script type="text/javascript" src="js/ie6png.js"></script>
+<script type="text/javascript">
+    DD_belatedPNG.fix('.header-logo, .png-fix');
+    DD_belatedPNG.fix('.circle_act');
+</script>
+<![endif]-->
+</body>
+</html>
